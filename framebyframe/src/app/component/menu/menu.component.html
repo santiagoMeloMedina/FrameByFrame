@@ -1,0 +1,26 @@
+<div class="menu">
+    <button class="page" *ngFor="let pg of ['HOME', 'ABOUT', 'WORK', 'CONTANCT']">
+        {{ pg }}
+    </button>
+</div>
+
+<div class="options">
+    <div class="language">
+        <img src="assets/flags/brit.png" class="flag">
+        <span class="current">ENGLISH</span>
+        <div class="indicator"></div>
+    </div>
+    <div class="deploy" (click)="toggleMenu()">
+        <div id="nav-icon4" [ngClass]="getDisplayMenu() ? 'open' : ''">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+
+<div [ngClass]="getDisplayMenu() ? 'deployMenu' : 'hide'">
+    <button class="page" *ngFor="let pg of ['Home', 'About', 'Work', 'Contact']">
+        {{ pg }}
+    </button>
+</div>

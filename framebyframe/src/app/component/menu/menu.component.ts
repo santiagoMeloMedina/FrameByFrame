@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  private displayMenu: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  public getDisplayMenu(): boolean {
+    return this.displayMenu;
+  }
+
+  public toggleMenu(): void {
+    this.displayMenu = !this.displayMenu;
+  }
+
+
 
 }

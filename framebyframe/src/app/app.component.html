@@ -1,7 +1,7 @@
 
 <div class="page">
   <header>
-    <img src="assets/fbflogo.svg" class="logo">
+    <img src="{{ getSimpleLogo() ? 'assets/fbflogo.svg': 'assets/fbftextlogo.png'}}" class="logo" [ngStyle]="{'width': getSimpleLogo() ? '45px':'auto', 'left': getSimpleLogo() ? '10%':'20%'}">
     <app-menu class="menu"></app-menu>
   </header>
   
