@@ -18,6 +18,10 @@ export class MenuComponent implements OnInit {
     return this.displayMenu;
   }
 
+  public closeDisplay(): void {
+    this.displayMenu = false;
+  }
+
   public toggleMenu(): void {
     this.displayMenu = !this.displayMenu;
   }

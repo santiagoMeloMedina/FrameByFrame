@@ -1,13 +1,9 @@
 
 export const CONSTANTS = {
-    "0": {
-        "name": "MENU",
-        "last": "0",
-        "next": "126"
+    "0-125": {
+        "name": "MENU"
     },
-    "126": {
-        "name": "FEED",
-        "last": "0",
-        "next": "2000"
+    "126-2000": {
+        "name": "FEED"
     }
 }

@@ -1,12 +1,16 @@
 
 <div class="page">
   <header>
-    <img src="{{ getSimpleLogo() ? 'assets/fbflogo.svg': 'assets/fbftextlogo.png'}}" class="logo" [ngStyle]="{'width': getSimpleLogo() ? '45px':'auto', 'left': getSimpleLogo() ? '10%':'20%'}">
-    <app-menu class="menu"></app-menu>
+    <img src="assets/fbflogo.svg" class="logo">
+    <app-menu class="menu" #menuChild ></app-menu>
   </header>
   
   <div class="feed">
     <router-outlet></router-outlet>
+    <div [ngClass]="getFollowHeader() ? 'follow':'hide'">
+      <img src="assets/fbftextlogo.png" class="logo">
+      <app-menu class="menu" #menuChildFollow ></app-menu>
+    </div>
   </div>
   
   <footer>
