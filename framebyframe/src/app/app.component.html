@@ -1,0 +1,23 @@
+
+<div class="page">
+  <header>
+    <img src="assets/fbflogo.svg" class="logo">
+    <app-menu class="menu"></app-menu>
+  </header>
+  
+  <div class="feed">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <footer>
+    <img src="assets/fbflogo.svg" class="logo">
+    <div class="copyright">
+      Copyright Frame By Frame Films 2019. All Rights Reserved.
+    </div>
+    <div class="links">
+      <span class="link" *ngFor="let pg of ['Privacy Policy', 'Privacy Settings', 'Impressum']">
+        <a href="">{{ pg }}</a>
+      </span>
+    </div>
+  </footer>
+</div>
