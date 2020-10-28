@@ -3,6 +3,80 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    background-color: green;
+    background-color: black;
+}
+
+.column {
+    position: absolute;
+    width: 100%;
+    height: 62%;
+    top: 120px;
+}
+
+.content {
+    position: absolute;
+    height: 100%;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    transform: translate(-50%, 0);
+    left: 50%;
+}
+
+.content .video {
+    width: 266px;
+    height: 148px;
+    background-color: white;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+.more {
+    position: absolute;
+    left: 30px;
+    bottom: -60px;
+    width: 180px;
+    height: 48px;
+    background-color: black;
+    outline: none;
+    border: 2px solid white;
+    font-size: 13px;
+    font-family: Dosis;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: white;
+}
+
+.more:hover {
+    background-color: white;
+    color: black;
+}
+
+@media only screen and (max-width: 961px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content .video {
+        width: 266px;
+        height: 148px;
+    }
+
+    .column {
+        height: 70%;
+    }
+}
+
+@media only screen and (max-width: 701px) {
+    .content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .content .video {
+        width: 440px;
+        height: 130px;
+    }
+
+    .column {
+        height: 81%;
+    }
 }

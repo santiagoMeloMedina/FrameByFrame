@@ -6,6 +6,16 @@
     overflow: hidden;
 }
 
+.column {
+    position: relative;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 0;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+}
+
 .title {
     position: absolute;
     width: 250px;
@@ -15,9 +25,9 @@
 
 .title .line {
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(0, -50%);
     top: 50%;
-    left: 10%;
+    left: 30px;
     width: 6%;
     height: 8%;
     background-color: #222222;
@@ -29,7 +39,7 @@
     top: 50%;
     width: 120px;
     height: 100%;
-    left: 20%;
+    left: 55px;
     font-weight: 600;
     font-family: Dosis;
     line-height: 20px;
@@ -47,13 +57,18 @@
 .about {
     position: relative;
     width: 100%;
+    height: auto;
+    background-color: black;
+    overflow: hidden;
     height: 400px;
 }
 
 .work {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 570px;
+    background-color: black;
+    overflow: hidden;
 }
 
 .contact {
@@ -72,4 +87,21 @@
     position: relative;
     width: 100%;
     height: 315px;
+}
+
+@media only screen and (max-width: 961px) {
+
+    .about {
+        height: 500px;
+    }
+
+    .work {
+        height: 750px;
+    }
+}
+
+@media only screen and (max-width: 701px) {
+    .work {
+        height: 1200px;
+    }
 }
