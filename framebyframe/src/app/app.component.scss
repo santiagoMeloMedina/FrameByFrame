@@ -117,7 +117,17 @@ footer .links .link a {
     color: #C89F48;
 }
 
+
+@media only screen and (max-width: 701px) {
+    .page {
+        height: 4780px;
+    }
+}
+
 @media only screen and (max-width: 961px) {
+    .page {
+        min-height: 4050px;
+    }
 
     header .logo {
         display: inline;

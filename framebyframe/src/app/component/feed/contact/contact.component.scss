@@ -3,5 +3,146 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: yellow;
+}
+
+.box {
+    position: absolute;
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    height: 100%;
+    top: 125px;
+    transform: translate(-50%, 0);
+    left: 50%;
+}
+
+.box .info {
+    position: relative;
+    height: 240px;
+}
+
+.box .info .content {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    left: 30px;
+    font-family: Ubuntu;
+    line-height: 34px;
+    letter-spacing: normal;
+    font-weight: 400;
+    font-size: 100%;
+    color: white;
+}
+
+.more {
+    position: absolute;
+    left: 30px;
+    bottom: 15px;
+    width: 190px;
+    height: 48px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid white;
+    font-size: 13px;
+    font-family: Dosis;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: white;
+}
+
+.more:hover {
+    background-color: white;
+    color: black;
+}
+
+.box .data {
+    position: relative;
+    height: 600px;
+}
+
+.box .data .form {
+    position: absolute;
+    width: 90%;
+    transform: translate(-50%, 0);
+    left: 50%;
+    display: inline-grid;
+    grid-template-columns: repeat(1, fr);
+}
+
+.box .data .form input {
+    height: 35px;
+    background-color: black;
+}
+
+.box .data .form textarea {
+    background-color: black;
+}
+
+.box .data .form .field {
+    margin: 15px;
+    border: none;
+    border-radius: 0;
+    padding-left: 10px;
+    font-family: Ubuntu;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 26px;
+    color: #878787;
+    font-size: 14px;
+}
+
+.box .data .form .field span {
+    font-family: Ubuntu;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 10px;
+    padding-left: 30px;
+    text-indent: -30px;
+}
+
+.box .data .form .field input {
+    position: absolute;
+}
+
+.box .data .submit {
+    position: absolute;
+    left: 30px;
+    bottom: 10px;
+    width: 120px;
+    height: 48px;
+    background-color: black;
+    outline: none;
+    border: none;
+    font-size: 13px;
+    font-family: Dosis;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: white;
+}
+
+@media only screen and (max-width: 961px) {
+    .box .info {
+        height: 290px;
+    }
+
+    .box .data .submit {
+        bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 701px) {
+    .box {
+        height: 80%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .box .info {
+        height: 210px;
+    }
+}
+
+@media only screen and (max-width: 481px) {
+    .box .info {
+        height: 250px;
+    }
 }
