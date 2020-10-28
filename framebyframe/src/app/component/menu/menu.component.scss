@@ -16,9 +16,10 @@
     border: none;
     text-align: center;
     font-weight: 800;
-    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+    font-family: Ubuntu;
     line-height: 20px;
     font-size: 12px;
+    letter-spacing: 1px;
     color: #CAA149;
 }
 
@@ -56,9 +57,10 @@
     transform: translate(0, -50%);
     top: 50%;
     font-weight: 800;
-    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+    font-family: Ubuntu;
     line-height: 20px;
     font-size: 13px;
+    letter-spacing: 1px;
     color: white;
     left: 25px;
 }
@@ -98,9 +100,9 @@
     border-radius: 0;
     border: none;
     background-color: #FFFFFF;
-    font-size: 15px;
-    font-weight: 600;
-    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Ubuntu;
     line-height: 20px;
     border-bottom: 1px solid rgba($color: gray, $alpha: 0.1);
     text-align: left;
