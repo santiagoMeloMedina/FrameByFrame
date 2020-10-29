@@ -1,11 +1,15 @@
 <div class="page">
     
-    <div class="front">
+    <div class="front" #divFront>
+        <video #videoPlayer autoplay loop muted controls="false">
+            <source src="assets/videos/front.mp4" type="video/mp4">
+            <source src="assets/videos/front.ogg" type="video/ogg">
+        </video> 
         <div class="column">
             <app-front></app-front>
         </div>
     </div>
-    <div class="about">
+    <div class="about" #divAbout>
         <div class="column">
             <app-about></app-about>
             <div class="title">
@@ -14,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div class="work">
+    <div class="work" #divWork>
         <div class="column">
             <app-work></app-work>
             <div class="title">
@@ -23,7 +27,7 @@
             </div>
         </div>
     </div>
-    <div class="contact">
+    <div class="contact" #divContact>
         <div class="column">
             <app-contact></app-contact>
             <div class="title">
@@ -32,7 +36,7 @@
             </div>
         </div>
     </div>
-    <div class="clients">
+    <div class="clients" #divClients>
         <div class="column">
             <app-clients></app-clients>
             <div class="title">
@@ -41,7 +45,7 @@
             </div>
         </div>
     </div>
-    <div class="information">
+    <div class="information" #divInformation>
         <div class="column">
             <app-information></app-information>
         </div>

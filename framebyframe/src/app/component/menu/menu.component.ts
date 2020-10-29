@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SectionService } from 'src/app/service/section/section.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +11,7 @@ export class MenuComponent implements OnInit {
 
   private displayMenu: boolean = false;
 
-  constructor() { }
+  constructor(public sectionService: SectionService) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +28,8 @@ export class MenuComponent implements OnInit {
     this.displayMenu = !this.displayMenu;
   }
 
-
+  public getSections(): Object[] {
+    return environment.SECTIONS.SECTIONS;
+  }
 
 }

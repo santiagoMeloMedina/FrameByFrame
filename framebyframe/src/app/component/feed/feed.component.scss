@@ -54,6 +54,15 @@
     height: 845px;
 }
 
+.front video {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: auto;
+    height: 105%;
+}
+
 .about {
     position: relative;
     width: 100%;
@@ -132,3 +141,17 @@
         height: 850px;
     }
 }
+
+.front video::-webkit-media-controls {
+    display: none;
+}
+  
+.front video::-webkit-media-controls-play-button {}
+
+.front video::-webkit-media-controls-volume-slider {}
+
+.front video::-webkit-media-controls-mute-button {}
+
+.front video::-webkit-media-controls-timeline {}
+
+.front video::-webkit-media-controls-current-time-display {}

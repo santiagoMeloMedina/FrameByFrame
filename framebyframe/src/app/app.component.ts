@@ -1,4 +1,4 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
+import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { CONSTANTS as SCROLL } from 'src/app/constant/scroll.constant';
 import { MenuComponent } from './component/menu/menu.component';
 
@@ -14,6 +14,8 @@ export class AppComponent {
 
   @ViewChild('menuChild') menuChild:MenuComponent;
   @ViewChild('menuChildFollow') menuChildFollow:MenuComponent;
+
+  constructor() {}
   
   title = 'framebyframe';
 
