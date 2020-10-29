@@ -12,6 +12,7 @@ header {
     left: 0;
     top: 0;
     background-color: black;
+    z-index: 100;
 }
 
 header .logo {
@@ -37,7 +38,7 @@ header .menu {
 }
 
 .feed .follow {
-    position: sticky;
+    position: fixed;
     width: 100%;
     height: 130px;
     top: 0;
@@ -68,6 +69,7 @@ footer {
     left: 0;
     bottom: 0;
     background-color: #0E0E0E;
+    z-index: 10;
 }
 
 footer .logo {

@@ -32,4 +32,9 @@ export class MenuComponent implements OnInit {
     return environment.SECTIONS.SECTIONS;
   }
 
+  public goToSection(key: string): void {
+    this.sectionService.scrollTo(key);
+    this.closeDisplay();
+  }
+
 }
