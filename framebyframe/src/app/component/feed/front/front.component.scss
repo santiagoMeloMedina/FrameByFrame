@@ -23,7 +23,7 @@
 .slogan {
     position: absolute;
     width: 100%;
-    top: 72%;
+    top: 600px;
 }
 
 .slogan span {
@@ -59,6 +59,10 @@
         width: 400px;
         height: 234.79px;
     }
+
+    .slogan {
+        top: 410px;
+    }
 }
 
 @media only screen and (max-width: 701px) {
@@ -66,11 +70,19 @@
         width: 300px;
         height: 176.0px;
     }
+
+    .slogan {
+        top: 380px;
+    }
 }
 
 @media only screen and (max-width: 481px) {
     .logo {
         width: 200px;
         height: 117.39px;
+    }
+
+    .slogan {
+        top: 350px;
     }
 }
