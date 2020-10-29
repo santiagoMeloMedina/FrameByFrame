@@ -80,3 +80,12 @@
         height: 81%;
     }
 }
+
+@media only screen and (max-width: 481px) {
+    .content .video {
+        margin-left: 40px;
+        width: 400px;
+        height: 130px;
+    }
+
+}

@@ -5,3 +5,66 @@
     height: 100%;
     background-color: #FFFFFF;
 }
+
+.logos {
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 170px;
+    left: 30px;
+    width: calc(100% - 60px);
+    height: auto;
+    display: inline-grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.logos .brand {
+    width: 200px;
+    height: 100px;
+}
+
+.logos .brand img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1151px) {
+    .logos .brand {
+        width: 170px;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 961px) {
+    .logos {
+        transform: translate(-50%, 0);
+        width: auto;
+        top: 110px;
+        left: 50%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 240px;
+        grid-row-gap: 50px;
+    }
+
+    .logos .brand {
+        width: 220px;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 701px) {
+    .logos {
+        width: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .logos .brand {
+        width: 250px;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 481px) {
+    .logos .brand {
+        width: 220px;
+        height: 100px;
+    }
+}
