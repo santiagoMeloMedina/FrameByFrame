@@ -7,7 +7,7 @@
 }
 
 .column {
-    position: relative;
+    position: absolute;
     transform: translate(-50%, 0);
     left: 50%;
     top: 0;
@@ -52,6 +52,9 @@
     position: relative;
     width: 100%;
     height: 845px;
+    overflow: hidden;
+    background-color: black;
+    z-index: 100;
 }
 
 .front video {
@@ -59,8 +62,8 @@
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    width: auto;
-    height: 105%;
+    width: 150%;
+    height: auto;
 }
 
 .about {
@@ -70,6 +73,7 @@
     background-color: black;
     overflow: hidden;
     height: 400px;
+    z-index: 100;
 }
 
 .work {
@@ -78,19 +82,50 @@
     height: 570px;
     background-color: black;
     overflow: hidden;
+    z-index: 100;
 }
 
 .contact {
     position: relative;
     width: 100%;
     height: 750px;
+    z-index: 100;
 }
+
+.image {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    height: auto;
+    width: 100%;
+    background-color: black;
+    z-index: 2;
+}
+
+.image img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    height: auto;
+    width: 100%;
+}
+
+.contact .screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+}
+
 
 .clients {
     position: relative;
     background-color: white;
     width: 100%;
     height: 260px;
+    z-index: 100;
 }
 
 .information {
@@ -98,6 +133,7 @@
     background-color: rgb(22, 22, 22);
     width: 100%;
     height: 350px;
+    z-index: 100;
 }
 
 @media only screen and (max-width: 961px) {
@@ -133,6 +169,10 @@
 
     .clients {
         height: 850px;
+    }
+
+    .contact .image {
+        width: 500%;
     }
 }
 

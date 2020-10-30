@@ -34,6 +34,7 @@ export class FeedComponent implements OnInit {
   ngOnInit(): void {
     let mute: any = setTimeout(() => {
       if (typeof this.videoPlayer !== "undefined") {
+        this.videoPlayer.play();
         this.videoPlayer.muted = true;
       } else {
         mute();

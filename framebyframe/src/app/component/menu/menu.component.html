@@ -1,5 +1,5 @@
 <div class="menu">
-    <button class="page" *ngFor="let pg of getSections()" (click)="sectionService.scrollTo(pg['key'])">
+    <button class="page" *ngFor="let pg of getSections()" (click)="goToSection(pg['key'])">
         {{ pg['name'] }}
     </button>
 </div>
@@ -22,7 +22,7 @@
 </div>
 
 <div [ngClass]="getDisplayMenu() ? 'deployMenu' : 'hide'">
-    <button class="page" *ngFor="let pg of getSections()" (click)="sectionService.scrollTo(pg['key'])">
+    <button class="page" *ngFor="let pg of getSections()" (click)="goToSection(pg['key'])">
         {{ pg['name'] }}
     </button>
 </div>

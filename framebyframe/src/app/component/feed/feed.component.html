@@ -1,7 +1,9 @@
 <div class="page">
-    
+    <div class="image">
+        <img src="assets/contact.jpg">
+    </div>
     <div class="front" #divFront>
-        <video #videoPlayer autoplay loop muted controls="false">
+        <video autoplay #videoPlayer loop>
             <source src="assets/videos/front.mp4" type="video/mp4">
             <source src="assets/videos/front.ogg" type="video/ogg">
         </video> 
@@ -28,6 +30,7 @@
         </div>
     </div>
     <div class="contact" #divContact>
+        <div class="screen"></div>
         <div class="column">
             <app-contact></app-contact>
             <div class="title">
