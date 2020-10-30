@@ -1,6 +1,7 @@
 import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { MenuComponent } from './component/menu/menu.component';
 import { environment } from 'src/environments/environment';
+import { LanguageService } from './service/configuration/language/language.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
   @ViewChild('menuChild') menuChild:MenuComponent;
   @ViewChild('menuChildFollow') menuChildFollow:MenuComponent;
 
-  constructor() {}
+  constructor(public language: LanguageService) {}
   
   title = 'framebyframe';
 

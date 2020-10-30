@@ -8,17 +8,16 @@
 
 .logos {
     position: absolute;
-    transform: translate(0, -50%);
-    top: 170px;
+    top: 150px;
     left: 30px;
     width: calc(100% - 60px);
     height: auto;
     display: inline-grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .logos .brand {
-    width: 200px;
+    width: 170px;
     height: 100px;
 }
 
@@ -28,7 +27,7 @@
 
 @media only screen and (max-width: 1151px) {
     .logos .brand {
-        width: 170px;
+        width: 120px;
         height: 100px;
     }
 }

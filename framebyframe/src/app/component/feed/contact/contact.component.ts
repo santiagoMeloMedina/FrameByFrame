@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { LanguageService } from 'src/app/service/configuration/language/language.service';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +11,7 @@ export class ContactComponent implements OnInit {
 
   private contactForm: FormGroup;
 
-  constructor() {
+  constructor(public language: LanguageService) {
     this.contactForm = new FormGroup({
       name: new FormControl(),
       email: new FormControl(),

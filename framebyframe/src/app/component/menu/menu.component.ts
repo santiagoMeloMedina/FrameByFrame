@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SectionService } from 'src/app/service/section/section.service';
 import { environment } from 'src/environments/environment';
+import { LanguageService } from 'src/app/service/configuration/language/language.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,10 +11,16 @@ import { environment } from 'src/environments/environment';
 export class MenuComponent implements OnInit {
 
   private displayMenu: boolean = false;
+  private displayLanguages: boolean = false;
 
-  constructor(public sectionService: SectionService) { }
+  constructor(public sectionService: SectionService, 
+              public language: LanguageService) { }
 
   ngOnInit(): void {
+  }
+
+  public getDisplayLanguages(): boolean {
+    return this.displayLanguages;
   }
 
   public getDisplayMenu(): boolean {
@@ -24,7 +31,18 @@ export class MenuComponent implements OnInit {
     this.displayMenu = false;
   }
 
+  public chooseLanguage(language: string) {
+    this.displayLanguages = false;
+    this.language.setCurrent(language);
+  }
+
+  public toggleLanguageDisplay(): void {
+    this.displayMenu = false;
+    this.displayLanguages = !this.displayLanguages;
+  }
+
   public toggleMenu(): void {
+    this.displayLanguages = false;
     this.displayMenu = !this.displayMenu;
   }
 

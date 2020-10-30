@@ -16,11 +16,17 @@
   <footer>
     <img src="assets/fbflogo.svg" class="logo">
     <div class="copyright">
-      Copyright Frame By Frame Films 2019. All Rights Reserved.
+      {{ language.get()['FOOTER']['COPYRIGHT'] }}
     </div>
     <div class="links">
-      <span class="link" *ngFor="let pg of ['Privacy Policy', 'Privacy Settings', 'Impressum']">
-        <a href="">{{ pg }}</a>
+      <span class="link">
+        <a href="">{{ language.get()['FOOTER']['PPOLICY'] }}</a>
+      </span>
+      <span class="link">
+        <a href="">{{ language.get()['FOOTER']['PSETTINGS'] }}</a>
+      </span>
+      <span class="link">
+        <a href="">{{ language.get()['FOOTER']['IMPRESSUM'] }}</a>
       </span>
     </div>
   </footer>

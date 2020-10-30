@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SectionService } from 'src/app/service/section/section.service';
 
 @Component({
   selector: 'app-front',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrontComponent implements OnInit {
 
-  constructor() { }
+  constructor(public sectionService: SectionService) { }
 
   ngOnInit(): void {
   }

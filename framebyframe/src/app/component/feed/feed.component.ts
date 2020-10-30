@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { SectionService } from 'src/app/service/section/section.service';
+import { LanguageService } from 'src/app/service/configuration/language/language.service';
 
 @Component({
   selector: 'app-feed',
@@ -25,7 +26,8 @@ export class FeedComponent implements OnInit {
 
   private currentSection: string = "";
 
-  constructor(private sectionService: SectionService) {
+  constructor(private sectionService: SectionService, 
+              public language: LanguageService) {
     this.setSections();
     this.setScroller();
   }
