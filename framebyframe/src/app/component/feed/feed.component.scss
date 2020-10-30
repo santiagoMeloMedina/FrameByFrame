@@ -54,7 +54,6 @@
     height: 845px;
     overflow: hidden;
     background-color: black;
-    z-index: 100;
 }
 
 .front video {
@@ -73,7 +72,6 @@
     background-color: black;
     overflow: hidden;
     height: 400px;
-    z-index: 100;
 }
 
 .work {
@@ -82,14 +80,12 @@
     height: 570px;
     background-color: black;
     overflow: hidden;
-    z-index: 100;
 }
 
 .contact {
     position: relative;
     width: 100%;
     height: 750px;
-    z-index: 100;
 }
 
 .image {
@@ -97,19 +93,17 @@
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    height: auto;
+    height: 500px;
     width: 100%;
-    background-color: black;
-    z-index: 2;
+    background-color: blue;
 }
 
 .image img {
-    position: absolute;
+    position: relative;
     transform: translate(-50%, -50%);
-    left: 50%;
     top: 50%;
-    height: auto;
-    width: 100%;
+    left: 50%;
+    width: 200%;
 }
 
 .contact .screen {
@@ -125,7 +119,6 @@
     background-color: white;
     width: 100%;
     height: 260px;
-    z-index: 100;
 }
 
 .information {
@@ -133,7 +126,6 @@
     background-color: rgb(22, 22, 22);
     width: 100%;
     height: 350px;
-    z-index: 100;
 }
 
 @media only screen and (max-width: 961px) {
@@ -174,6 +166,11 @@
     .contact .image {
         width: 500%;
     }
+
+    .image img {
+        width: 400%;
+    }
+    
 }
 
 @media only screen and (max-width: 481px) {
