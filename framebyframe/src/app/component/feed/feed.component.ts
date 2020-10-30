@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
-import { CONSTANTS as SCROLL } from 'src/app/constant/scroll.constant';
 import { SectionService } from 'src/app/service/section/section.service';
 
 @Component({
@@ -85,31 +84,5 @@ export class FeedComponent implements OnInit {
   public setScroller(): void {
     this.sectionService.setScroller(this.scroller.bind(this));
   }
-
-  // private changeSection(section: Object): boolean {
-  //   let changed: boolean = section["name"] != this.currentSection;
-  //   this.currentSection = section["name"];
-  //   return changed;
-  // }
-
-  // private determineScrolledSection(scrolled: number): void {
-  //   let section: string = Object.keys(SCROLL).filter(range => {
-  //     let nums: number[] = range.split("-").map(num => {
-  //       return parseFloat(num);
-  //     });
-  //     return scrolled >= nums[0] && scrolled <= nums[1];
-  //   })[0];
-  //   let changed: boolean = this.changeSection(SCROLL[section]);
-  //   if (changed) {
-  //     // this.sectionService.getCurrentSection();
-  //     this.sectionService.scrollTo("work");
-  //   }
-  // }
-
-  // @HostListener('window:scroll', ['$event'])
-  // onScroll(event) {
-  //   let scroller: any = event.target['scrollingElement'];
-  //   this.determineScrolledSection(scroller.scrollTop);
-  // }
-
+  
 }

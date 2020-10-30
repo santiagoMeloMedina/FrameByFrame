@@ -1,6 +1,6 @@
 import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
-import { CONSTANTS as SCROLL } from 'src/app/constant/scroll.constant';
 import { MenuComponent } from './component/menu/menu.component';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -36,7 +36,7 @@ export class AppComponent {
   private menuSectionAction(section: Object): void {
     this.menuChild.closeDisplay();
     this.menuChildFollow.closeDisplay();
-    if (section['name'] == SCROLL["0-125"]['name']){
+    if (section['name'] == environment.SCROLL["0-125"]['name']){
       this.setFollowHeader(false);
     } else {
       this.setFollowHeader(true);
@@ -44,15 +44,15 @@ export class AppComponent {
   }
 
   private determineScrolledSection(scrolled: number): void {
-    let section: string = Object.keys(SCROLL).filter(range => {
+    let section: string = Object.keys(environment.SCROLL).filter(range => {
       let nums: number[] = range.split("-").map(num => {
         return parseFloat(num);
       });
       return scrolled >= nums[0] && scrolled <= nums[1];
     })[0];
-    let changed: boolean = this.changeSection(SCROLL[section]);
+    let changed: boolean = this.changeSection(environment.SCROLL[section]);
     if (changed) {
-      this.menuSectionAction(SCROLL[section]);
+      this.menuSectionAction(environment.SCROLL[section]);
     }
   }
 
