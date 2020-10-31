@@ -1,5 +1,5 @@
 <div class="menu">
-    <button class="page" *ngFor="let pg of getSections()" (click)="goToSection(pg['key'])">
+    <button class="page" [ngStyle]="{'color': menuService.getBack() ? '':'white'}" *ngFor="let pg of getSections()" (click)="goToSection(pg['key'])">
         {{ language.get()['MENU'][pg['name']] }}
     </button>
 </div>

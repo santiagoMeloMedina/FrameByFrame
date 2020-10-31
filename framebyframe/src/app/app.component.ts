@@ -2,6 +2,8 @@ import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { MenuComponent } from 'src/app/component/menu/menu.component';
 import { environment } from 'src/environments/environment';
 import { LanguageService } from 'src/app/service/configuration/language/language.service';
+import { MenuService } from 'src/app/service/menu/menu.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,9 +18,15 @@ export class AppComponent {
   @ViewChild('menuChild') menuChild:MenuComponent;
   @ViewChild('menuChildFollow') menuChildFollow:MenuComponent;
 
-  constructor(public language: LanguageService) {}
+  constructor(public language: LanguageService, 
+              public menuService: MenuService, 
+              public router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (this.router.url == "/") {
+      this.menuService.enableBack();
+    }
+  }
   
   title = 'framebyframe';
 

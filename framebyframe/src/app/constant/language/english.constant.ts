@@ -57,7 +57,7 @@ export const CONSTANTS = {
     },
     ABOUTUS: {
         TITLE: "About Us",
-        SUBTITLE: "Creative Film Studio based out of New York",
+        SUBTITLE: "CREATIVE FILM STUDIO BASED OUT OF NEW YORK",
         MESSAGE: "If a picture is worth a thousand words, imagine what a video can do. We help brands and products connect & communicate their ideas through videos.",
         WHOAREWE_TITLE: "Who are we ?",
         WHOAREWE_MSG: "We are an award winning film & music studio that is based out of New York. We were established in the year 2011 and what started as an one man show, quickly grew into a team of 8 creatives now catering to some of the top brands in the country.",

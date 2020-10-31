@@ -3,6 +3,7 @@ import { SectionService } from 'src/app/service/section/section.service';
 import { environment } from 'src/environments/environment';
 import { LanguageService } from 'src/app/service/configuration/language/language.service';
 import { Router } from '@angular/router';
+import { MenuService } from 'src/app/service/menu/menu.service';
 
 @Component({
   selector: 'app-menu',
@@ -16,7 +17,8 @@ export class MenuComponent implements OnInit {
 
   constructor(public sectionService: SectionService, 
               public language: LanguageService, 
-              public router: Router) { }
+              public router: Router, 
+              public menuService: MenuService) { }
 
   ngOnInit(): void {
   }
@@ -58,6 +60,7 @@ export class MenuComponent implements OnInit {
   }
 
   public goToSection(key: string): void {
+    this.menuService.enableBack();
     this.router.navigateByUrl("").then(finish => {
       setTimeout(() => {
         this.sectionService.scrollTo(key);

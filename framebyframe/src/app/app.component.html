@@ -1,6 +1,6 @@
 <div class="box">
-    <header>
-        <img src="assets/fbflogo.svg" class="logo">
+    <header [ngStyle]="{'background-color': menuService.getBack() ? '':'transparent'}">
+        <img src="{{ menuService.getBack() ? 'assets/fbflogo.svg':'assets/fbflogowhite.svg' }}" class="logo">
         <app-menu class="menu" #menuChild ></app-menu>
     </header>
     <div class="body">

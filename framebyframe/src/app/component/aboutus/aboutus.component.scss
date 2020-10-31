@@ -4,4 +4,73 @@
     width: 100%;
     height: 1000px;
     background-color: white;
+    color: blue;
+}
+
+.image {
+    position: absolute;
+    width: 100%;
+    top: -125px;
+}
+
+.screen {
+    position: absolute;
+    width: 100%;
+    top: -125px;
+    height: 800px;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+}
+
+.front {
+    position: relative;
+    width: 100%;
+    height: 580px;
+}
+
+.front .subtitle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 25%;
+    left: 50%;
+    color: white;
+    font-family: Dosis;
+    font-size: 14.5px;
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-weight: 600;
+}
+
+.front .title {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+    color: white;
+    font-family: Ubuntu;
+    font-size: 100px;
+    letter-spacing: normal;
+    line-height: 115px;
+    font-weight: 700;
+}
+
+.message {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: white;
+}
+
+.message span {
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 55%;
+    left: 5%;
+    font-family: Ubuntu;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: rgba(48,49,50,1);
+    width: 50%;
+    
 }
