@@ -2,10 +2,10 @@
 export const CONSTANTS = {
     FLAG: "assets/flags/brit.png",
     MENU: {
-        HOME: "HOME",
-        ABOUT: "ABOUT",
-        WORK: "WORK",
-        CONTACT: "CONTACT"
+        HOME: "Home",
+        ABOUT: "About",
+        WORK: "Work",
+        CONTACT: "Contact"
     },
     SECTIONS: {
         TITLE: {
@@ -59,9 +59,9 @@ export const CONSTANTS = {
         TITLE: "About Us",
         SUBTITLE: "CREATIVE FILM STUDIO BASED OUT OF NEW YORK",
         MESSAGE: "If a picture is worth a thousand words, imagine what a video can do. We help brands and products connect & communicate their ideas through videos.",
-        WHOAREWE_TITLE: "Who are we ?",
+        WHOAREWE_TITLE: "WHO ARE WE ?",
         WHOAREWE_MSG: "We are an award winning film & music studio that is based out of New York. We were established in the year 2011 and what started as an one man show, quickly grew into a team of 8 creatives now catering to some of the top brands in the country.",
-        WHYUS_TITLE: "Why Us ?",
+        WHYUS_TITLE: "WHY US ?",
         WHYUS_MSG: "We are passionate about what we do and we settle for nothing but the best. We treat every project as if it was our first, yet use our experience from our previous works. We have diverse team with varied skills and the only thing common is that all are young & creative."
     }
 }

@@ -1,7 +1,7 @@
 <div class="box">
     <header [ngStyle]="{'background-color': menuService.getBack() ? '':'transparent'}">
-        <img src="{{ menuService.getBack() ? 'assets/fbflogo.svg':'assets/fbflogowhite.svg' }}" class="logo">
         <app-menu class="menu" #menuChild ></app-menu>
+        <img src="{{ menuService.getBack() ? 'assets/fbflogo.svg':'assets/fbflogowhite.svg' }}" class="logo" (click)="goHome()">
     </header>
     <div class="body">
         <router-outlet></router-outlet>

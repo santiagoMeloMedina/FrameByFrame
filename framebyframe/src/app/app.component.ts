@@ -30,6 +30,11 @@ export class AppComponent {
   
   title = 'framebyframe';
 
+  public goHome(): void {
+    this.menuService.enableBack();
+    this.router.navigateByUrl('');
+  }
+
   public setFollowHeader(value: boolean): void {
     this.followHeader = value;
   }
