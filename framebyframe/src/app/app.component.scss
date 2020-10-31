@@ -1,8 +1,8 @@
-
-.page {
+.box {
     position: absolute;
     width: 100%;
-    height: 3390px;
+    min-height: 100%;
+    height: 100px;
 }
 
 header {
@@ -12,7 +12,6 @@ header {
     left: 0;
     top: 0;
     background-color: black;
-    z-index: 100;
 }
 
 header .logo {
@@ -30,14 +29,12 @@ header .menu {
     height: 100%;
 }
 
-.feed {
+.body {
     position: relative;
     width: 100%;
-    height: calc(100% - 95px - 125px);
-    background-color: red;
 }
 
-.feed .follow {
+.follow {
     position: fixed;
     width: 100%;
     height: 130px;
@@ -46,7 +43,7 @@ header .menu {
     z-index: 100;
 }
 
-.feed .follow .logo {
+.follow .logo {
     position: absolute;
     height: auto;
     transform: translate(-50%, -50%);
@@ -55,21 +52,20 @@ header .menu {
     left: 20%;
 }
 
-.feed .follow .menu {
+.follow .menu {
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
 footer {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 95px;
     overflow: hidden;
     left: 0;
     bottom: 0;
     background-color: #0E0E0E;
-    z-index: 100;
 }
 
 footer .logo {
@@ -120,16 +116,9 @@ footer .links .link a {
 
 
 @media only screen and (max-width: 961px) {
-    .page {
-        height: 4000px;
-    }
 
     header .logo {
         display: inline;
-    }
-
-    .feed {
-        height: calc(100% - 215px - 125px);
     }
 
     footer {
@@ -163,7 +152,4 @@ footer .links .link a {
 }
 
 @media only screen and (max-width: 701px) {
-    .page {
-        height: 5010px;
-    }
 }

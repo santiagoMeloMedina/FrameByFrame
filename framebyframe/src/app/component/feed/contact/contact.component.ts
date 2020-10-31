@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { LanguageService } from 'src/app/service/configuration/language/language.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -21,6 +22,10 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  public getLinks(): Object {
+    return environment.LINK;
   }
 
   public getContanctForm(): FormGroup {

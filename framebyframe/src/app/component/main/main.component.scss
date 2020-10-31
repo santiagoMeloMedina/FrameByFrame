@@ -1,0 +1,32 @@
+
+.page {
+    position: relative;
+    width: 100%;
+    height: 3150px;
+}
+
+.feed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 961px) {
+    .page {
+        height: 3670px;
+    }
+
+    .feed {
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 1301px) {
+}
+
+@media only screen and (max-width: 701px) {
+    .page {
+        height: 4670px;
+    }
+}

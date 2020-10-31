@@ -1,33 +1,31 @@
-
-<div class="page">
-  <header>
-    <img src="assets/fbflogo.svg" class="logo">
-    <app-menu class="menu" #menuChild ></app-menu>
-  </header>
-  
-  <div class="feed">
-    <router-outlet></router-outlet>
+<div class="box">
+    <header>
+        <img src="assets/fbflogo.svg" class="logo">
+        <app-menu class="menu" #menuChild ></app-menu>
+    </header>
+    <div class="body">
+        <router-outlet></router-outlet>
+    </div>
     <div [ngClass]="getFollowHeader() ? 'follow':'hide'">
-      <img src="assets/fbftextlogo.png" class="logo">
-      <app-menu class="menu" #menuChildFollow ></app-menu>
+        <img src="assets/fbftextlogo.png" class="logo">
+        <app-menu class="menu" #menuChildFollow ></app-menu>
     </div>
-  </div>
-  
-  <footer>
-    <img src="assets/fbflogo.svg" class="logo">
-    <div class="copyright">
-      {{ language.get()['FOOTER']['COPYRIGHT'] }}
-    </div>
-    <div class="links">
-      <span class="link">
-        <a href="">{{ language.get()['FOOTER']['PPOLICY'] }}</a>
-      </span>
-      <span class="link">
-        <a href="">{{ language.get()['FOOTER']['PSETTINGS'] }}</a>
-      </span>
-      <span class="link">
-        <a href="">{{ language.get()['FOOTER']['IMPRESSUM'] }}</a>
-      </span>
-    </div>
-  </footer>
+    
+    <footer>
+        <img src="assets/fbflogo.svg" class="logo">
+        <div class="copyright">
+        {{ language.get()['FOOTER']['COPYRIGHT'] }}
+        </div>
+        <div class="links">
+        <span class="link">
+            <a href="">{{ language.get()['FOOTER']['PPOLICY'] }}</a>
+        </span>
+        <span class="link">
+            <a href="">{{ language.get()['FOOTER']['PSETTINGS'] }}</a>
+        </span>
+        <span class="link">
+            <a href="">{{ language.get()['FOOTER']['IMPRESSUM'] }}</a>
+        </span>
+        </div>
+    </footer>
 </div>

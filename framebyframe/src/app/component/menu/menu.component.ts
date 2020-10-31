@@ -31,6 +31,11 @@ export class MenuComponent implements OnInit {
     this.displayMenu = false;
   }
 
+  public lowerCased(str: string): string {
+    str = str.toLowerCase();
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
   public chooseLanguage(language: string) {
     this.displayLanguages = false;
     this.language.setCurrent(language);

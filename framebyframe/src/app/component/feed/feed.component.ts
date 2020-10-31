@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { SectionService } from 'src/app/service/section/section.service';
 import { LanguageService } from 'src/app/service/configuration/language/language.service';
-
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.component.html',

@@ -4,7 +4,7 @@
             <div class="content">
                 {{ language.get()['CONTENT']['CONTACT']['FIRST'] }}
             </div>
-            <button class="more">{{ language.get()['BUTTONS']['WHATSAPP'] }}</button>
+            <a href="{{ getLinks()['WHATSAPP'] }}" target="_blank"><button class="more">{{ language.get()['BUTTONS']['WHATSAPP'] }}</button></a>
         </div>
         <div class="data">
             <form [formGroup]="getContanctForm()" class="form">

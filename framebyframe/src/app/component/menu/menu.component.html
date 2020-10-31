@@ -30,6 +30,6 @@
 
 <div [ngClass]="getDisplayMenu() ? 'deployMenu' : 'hide'">
     <button class="page" *ngFor="let pg of getSections()" (click)="goToSection(pg['key'])">
-        {{ language.get()['MENU'][pg['name']] }}
+        {{ lowerCased(language.get()['MENU'][pg['name']]) }}
     </button>
 </div>

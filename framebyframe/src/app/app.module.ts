@@ -12,6 +12,8 @@ import { WorkComponent } from './component/feed/work/work.component';
 import { ContactComponent } from './component/feed/contact/contact.component';
 import { ClientsComponent } from './component/feed/clients/clients.component';
 import { InformationComponent } from './component/feed/information/information.component';
+import { MainComponent } from './component/main/main.component';
+import { PortafolioComponent } from './component/portafolio/portafolio.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { InformationComponent } from './component/feed/information/information.c
     WorkComponent,
     ContactComponent,
     ClientsComponent,
-    InformationComponent
+    InformationComponent,
+    MainComponent,
+    PortafolioComponent
   ],
   imports: [
     BrowserModule,

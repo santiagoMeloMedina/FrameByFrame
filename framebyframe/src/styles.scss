@@ -1,8 +1,27 @@
 
+.image {
+    position: fixed;
+    transform: translate(-50%, 0);
+    left: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.image img {
+    position: relative;
+    transform: translate(-50%, 0);
+    left: 50%;
+    min-width: 100%;
+    width: auto;
+    min-height: 100%;
+}
+
 html, body {
+    width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
     margin: 0;
+    padding: 0;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }

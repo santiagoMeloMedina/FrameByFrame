@@ -1,14 +1,14 @@
-import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { MenuComponent } from 'src/app/component/menu/menu.component';
 import { environment } from 'src/environments/environment';
 import { LanguageService } from 'src/app/service/configuration/language/language.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss']
 })
-export class AppComponent {
+export class MainComponent implements OnInit {
 
   private followHeader: boolean = false;
   private currentSection: string = "";
@@ -64,4 +64,5 @@ export class AppComponent {
     let scroller: any = event.target['scrollingElement'];
     this.determineScrolledSection(scroller.scrollTop);
   }
+
 }
