@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SectionService } from 'src/app/service/section/section.service';
 import { environment } from 'src/environments/environment';
 import { LanguageService } from 'src/app/service/configuration/language/language.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -14,7 +15,8 @@ export class MenuComponent implements OnInit {
   private displayLanguages: boolean = false;
 
   constructor(public sectionService: SectionService, 
-              public language: LanguageService) { }
+              public language: LanguageService, 
+              public router: Router) { }
 
   ngOnInit(): void {
   }
@@ -56,8 +58,12 @@ export class MenuComponent implements OnInit {
   }
 
   public goToSection(key: string): void {
-    this.sectionService.scrollTo(key);
-    this.closeDisplay();
+    this.router.navigateByUrl("").then(finish => {
+      setTimeout(() => {
+        this.sectionService.scrollTo(key);
+        this.closeDisplay();
+      }, 500);
+    })
   }
 
 }

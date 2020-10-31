@@ -4,6 +4,6 @@
             {{ language.get()['CONTENT']['ABOUT']['FIRST'] }}<br><br> 
             {{ language.get()['CONTENT']['ABOUT']['SECOND'] }}
         </div>
-        <button class="more">{{ language.get()['BUTTONS']['LEARN_MORE'] }}</button>
+        <button class="more" (click)="router.navigateByUrl('about')">{{ language.get()['BUTTONS']['LEARN_MORE'] }}</button>
     </div>
 </div>

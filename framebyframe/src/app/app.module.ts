@@ -14,6 +14,7 @@ import { ClientsComponent } from './component/feed/clients/clients.component';
 import { InformationComponent } from './component/feed/information/information.component';
 import { MainComponent } from './component/main/main.component';
 import { PortafolioComponent } from './component/portafolio/portafolio.component';
+import { AboutusComponent } from './component/aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PortafolioComponent } from './component/portafolio/portafolio.component
     ClientsComponent,
     InformationComponent,
     MainComponent,
-    PortafolioComponent
+    PortafolioComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,

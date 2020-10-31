@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular
 import { SectionService } from 'src/app/service/section/section.service';
 import { LanguageService } from 'src/app/service/configuration/language/language.service';
 import { environment } from 'src/environments/environment';
+
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.component.html',
@@ -14,7 +15,6 @@ export class FeedComponent implements OnInit {
   @ViewChild("divWork") divWork: ElementRef;
   @ViewChild("divContact") divContact: ElementRef;
   @ViewChild("divClients") divClients: ElementRef;
-  @ViewChild("divInformation") divInformation: ElementRef;
 
   private videoPlayer: HTMLVideoElement;
 
@@ -33,6 +33,7 @@ export class FeedComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     let mute: any = setTimeout(() => {
       if (typeof this.videoPlayer !== "undefined") {
         this.videoPlayer.play();
@@ -63,10 +64,6 @@ export class FeedComponent implements OnInit {
     return this.divClients;
   }
 
-  public getInformationSection(): ElementRef {
-    return this.divInformation;
-  }
-
   public scroller(distance: number): void {
     window.scrollTo(0, distance);
   }
@@ -77,8 +74,7 @@ export class FeedComponent implements OnInit {
       "about": this.getAboutSection.bind(this),
       "work": this.getWorkSection.bind(this),
       "contact": this.getContactSection.bind(this),
-      "clients": this.getClientsSection.bind(this),
-      "information": this.getInformationSection.bind(this)
+      "clients": this.getClientsSection.bind(this)
     };
     this.sectionService.setSections(sections);
   }
