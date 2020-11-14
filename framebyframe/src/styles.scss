@@ -4,16 +4,12 @@
     transform: translate(-50%, 0);
     left: 50%;
     height: 100%;
-    width: 100%;
-}
-
-.image img {
-    position: relative;
-    transform: translate(-50%, 0);
-    left: 50%;
-    min-width: 100%;
-    width: auto;
-    min-height: 100%;
+    width: 105%;
+    background-image: url("assets/contact.jpg");
+    background-size: 100%;
+    min-width: 1500px;
+    background-position-x: center;
+    background-position-y: center;
 }
 
 html, body {
@@ -45,3 +41,14 @@ body::-webkit-scrollbar {
     font-weight: 600;
     unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
+
+
+.noselection {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}

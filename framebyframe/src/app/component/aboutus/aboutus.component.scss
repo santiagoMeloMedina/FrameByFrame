@@ -6,10 +6,12 @@
     background-color: white;
 }
 
-.image {
+.page .image {
     position: absolute;
     width: 100%;
+    height: 740px;
     top: -125px;
+    background-image: url("/assets/aboutus.jpg");
 }
 
 .screen {

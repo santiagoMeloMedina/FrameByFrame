@@ -57,7 +57,7 @@
 
 .box .data {
     position: relative;
-    height: 600px;
+    height: 605px;
 }
 
 .box .data .form {
@@ -67,6 +67,7 @@
     left: 50%;
     display: inline-grid;
     grid-template-columns: repeat(1, fr);
+    grid-row-gap: 0px;
 }
 
 .box .data .form input {
@@ -98,6 +99,7 @@
     line-height: 10px;
     padding-left: 30px;
     text-indent: -30px;
+    font-size: 14px;
 }
 
 .box .data .form .field input {
@@ -127,6 +129,12 @@
 
     .box .data .submit {
         bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 871px) {
+    .box .data .form .field span {
+        font-size: 13px;
     }
 }
 

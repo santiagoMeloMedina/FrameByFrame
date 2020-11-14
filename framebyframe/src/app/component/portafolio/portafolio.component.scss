@@ -2,6 +2,139 @@
 .page {
     position: relative;
     width: 100%;
-    height: 1000px;
+    min-height: 900px;
     background-color: white;
+}
+
+.subtitle {
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 70px;
+    font-family: 'Dosis';
+    font-size: 15px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.title {
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 130px;
+    font-family: 'Ubuntu';
+    font-size: 100px;
+    line-height: 52px;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
+
+.categories {
+    position: absolute;
+    display: inline-grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 20px;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 350px;
+
+}
+
+.categories .category {
+    position: relative;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.categories .category .name {
+    position: relative;
+    font-size: 13px;
+    font-family: 'Dosis';
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.categories .category .name:hover {
+    color: rgba(177,152,129,1);
+}
+
+.videos {
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 120px;
+    grid-row-gap: 50px;
+    top: 500px;
+}
+
+.videos .video {
+    position: relative;
+    width: 300px;
+    height: 140px;
+    background-color: blue;
+}
+
+@media only screen and (max-width: 1750px) {
+    .page {
+        min-height: 1100px;
+    }
+
+    .videos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .page {
+        min-height: 1300px;
+    }
+
+    .videos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 961px) {
+    .page {
+        min-height: 1300px;
+    }
+    
+    .title {
+        top: 120px;
+        font-size: 70px;
+    }
+
+    .categories {
+        top: 300px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media only screen and (max-width: 701px) {
+    .page {
+        min-height: 2050px;
+    }
+
+    .title {
+        top: 110px;
+        font-size: 40px;
+    }
+
+    .categories {
+        top: 250px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .videos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (max-width: 481px) {
 }
