@@ -1,20 +1,28 @@
 <div class="page">
-    <div class="subtitle">{{ language.get()['PORTAFOLIO']['SUBTITLE'] }}</div>
-    <div class="title">{{ language.get()['PORTAFOLIO']['TITLE'] }}</div>
-    <div class="categories">
-        <div class="category" 
-            [ngStyle]="{
-                'border': isSelected(category) ? '1px solid rgba(177,152,129,1)':'none',
-                'color': isSelected(category) ? 'rgba(177,152,129,1)':'black',
-                'padding': isSelected(category) ? '9px':''
-            }" 
-            *ngFor="let category of ['All', 'Edit & VFX Only', 'Event Main Promo', 'Event Post Promo', 'Official Music Videos', 'Sweet Sixteen', 'Weddings']"
-            (click)="selectCategory(category)">
-            <div class="name">{{ category }}</div>
+    <div class="content">
+        <div class="info">
+            <div class="subtitle">{{ language.get()['PORTAFOLIO']['SUBTITLE'] }}</div>
+            <div class="title">{{ language.get()['PORTAFOLIO']['TITLE'] }}</div>
         </div>
-    </div>
-    <div class="videos">
-        <div class="video" *ngFor="let video of [1,2,3,4,5,6,7,8]">
+        <div class="categories">
+            <div class="category" 
+                [ngStyle]="{
+                    'border': isSelected(category) ? '1px solid rgba(177,152,129,1)':'none',
+                    'color': isSelected(category) ? 'rgba(177,152,129,1)':'black',
+                    'padding': isSelected(category) ? '9px':''
+                }" 
+                *ngFor="let category of getCategories()"
+                (click)="selectCategory(category)">
+                <div class="name">{{ category.getName() }}</div>
+            </div>
         </div>
+        <div class="videos">
+            <div class="video" *ngFor="let video of getVideosByCategory()">
+                <video autoplay #videoPlayer loop>
+                    <source src="{{video.getContent()['src']}}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="space"></div>
     </div>
 </div>

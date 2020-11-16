@@ -2,8 +2,18 @@
 .page {
     position: relative;
     width: 100%;
-    min-height: 900px;
     background-color: white;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+}
+
+.info {
+    position: relative;
+    width: 100%;
+    height: 300px;
 }
 
 .subtitle {
@@ -31,14 +41,12 @@
 }
 
 .categories {
-    position: absolute;
+    position: relative;
     display: inline-grid;
     grid-template-columns: repeat(7, 1fr);
     grid-column-gap: 20px;
     transform: translate(-50%, 0);
     left: 50%;
-    top: 350px;
-
 }
 
 .categories .category {
@@ -62,37 +70,47 @@
 }
 
 .videos {
-    position: absolute;
-    transform: translate(-50%, 0);
-    left: 50%;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 120px;
     grid-row-gap: 50px;
-    top: 500px;
+    margin-top: 50px;
+    width: 100%;
 }
 
 .videos .video {
     position: relative;
+    transform: translate(-50%, 0);
+    left: 50%;
     width: 300px;
     height: 140px;
-    background-color: blue;
+    overflow: hidden;
+    background-color: white;
+}
+
+.videos .video video {
+    position: relative;
+    width: 90%;
+    transform: translate(0, -50%);
+    top: 50%;
+    background-color: white;
+}
+
+.space {
+    position: relative;
+    width: 100%;
+    height: 50px;
 }
 
 @media only screen and (max-width: 1750px) {
-    .page {
-        min-height: 1100px;
-    }
-
+    
     .videos {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media only screen and (max-width: 1400px) {
-    .page {
-        min-height: 1300px;
-    }
 
     .videos {
         grid-template-columns: repeat(2, 1fr);
@@ -100,9 +118,6 @@
 }
 
 @media only screen and (max-width: 961px) {
-    .page {
-        min-height: 1300px;
-    }
     
     .title {
         top: 120px;
@@ -110,24 +125,14 @@
     }
 
     .categories {
-        top: 300px;
         grid-template-columns: repeat(3, 1fr);
     }
 
 }
 
 @media only screen and (max-width: 701px) {
-    .page {
-        min-height: 2050px;
-    }
-
-    .title {
-        top: 110px;
-        font-size: 40px;
-    }
 
     .categories {
-        top: 250px;
         grid-template-columns: repeat(2, 1fr);
     }
 
