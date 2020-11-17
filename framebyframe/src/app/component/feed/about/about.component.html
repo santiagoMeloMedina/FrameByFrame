@@ -1,8 +1,8 @@
 <div class="page">
     <div class="column">
         <div class="content">
-            {{ language.get()['CONTENT']['ABOUT']['FIRST'] }}<br><br> 
-            {{ language.get()['CONTENT']['ABOUT']['SECOND'] }}
+            <span>{{ language.get()['CONTENT']['ABOUT']['FIRST'] }}</span><br><br> 
+            <span>{{ language.get()['CONTENT']['ABOUT']['SECOND'] }}</span>
         </div>
         <button class="more" (click)="router.navigateByUrl('about')">{{ language.get()['BUTTONS']['LEARN_MORE'] }}</button>
     </div>

@@ -26,6 +26,7 @@
     line-height: 32px;
     letter-spacing: 1px;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .title {
@@ -38,6 +39,10 @@
     line-height: 52px;
     letter-spacing: 0px;
     font-weight: 700;
+}
+
+.title::first-letter {
+    text-transform: uppercase;
 }
 
 .categories {

@@ -39,6 +39,7 @@
     letter-spacing: 1px;
     line-height: 26px;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .front .title {
@@ -73,7 +74,10 @@
     letter-spacing: 0;
     color: rgba(48,49,50,1);
     width: 70%;
-    
+}
+
+.message span::first-letter {
+    text-transform: uppercase;
 }
 
 .questions {
@@ -104,6 +108,7 @@
     font-weight: 600;
     text-transform: uppercase;
     color: #203132;
+    text-transform: uppercase;
 }
 
 .questions .question .msg {
@@ -116,6 +121,10 @@
     font-weight: 400;
     letter-spacing: normal;
     color: #878787;
+}
+
+.questions .question .msg::first-letter {
+    text-transform: uppercase;
 }
 
 @media only screen and (max-width: 961px) {

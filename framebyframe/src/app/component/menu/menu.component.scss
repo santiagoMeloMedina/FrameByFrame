@@ -144,6 +144,10 @@
     z-index: 100;
 }
 
+.deployMenu .page::first-letter {
+    text-transform: uppercase;
+}
+
 .deployMenu .page:hover {
     background-color: lightgray;
 }

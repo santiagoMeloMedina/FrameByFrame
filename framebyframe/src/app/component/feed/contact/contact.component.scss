@@ -34,6 +34,10 @@
     color: white;
 }
 
+.box .info .content::first-letter {
+    text-transform: uppercase;
+}
+
 .more {
     position: absolute;
     left: 30px;
@@ -48,6 +52,7 @@
     letter-spacing: 1px;
     font-weight: 600;
     color: white;
+    text-transform: uppercase;
 }
 
 .more:hover {
@@ -92,6 +97,10 @@
     font-size: 14px;
 }
 
+.box .data .form .field::first-letter {
+    text-transform: uppercase;
+}
+
 .box .data .form .field span {
     font-family: Ubuntu;
     font-weight: 400;
@@ -100,6 +109,10 @@
     padding-left: 30px;
     text-indent: -30px;
     font-size: 14px;
+}
+
+.box .data .form .field span::first-letter {
+    text-transform: uppercase;
 }
 
 .box .data .form .field input {
@@ -120,6 +133,7 @@
     letter-spacing: 1px;
     font-weight: 600;
     color: white;
+    text-transform: uppercase;
 }
 
 @media only screen and (max-width: 961px) {

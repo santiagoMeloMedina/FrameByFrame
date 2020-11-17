@@ -31,6 +31,7 @@
     line-height: 28px;
     font-weight: 600;
     color: white;
+    text-transform: uppercase;
 }
 
 .info .text {
@@ -42,6 +43,10 @@
     font-weight: 300;
     color: rgb(153, 153, 153);
     top: 50px;
+}
+
+.info .text::first-letter {
+    text-transform: uppercase;
 }
 
 .info .socials {

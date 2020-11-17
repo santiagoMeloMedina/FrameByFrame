@@ -26,6 +26,10 @@
     color: white;
 }
 
+.content span::first-letter {
+    text-transform: uppercase;
+}
+
 .more {
     position: absolute;
     left: 30px;
@@ -40,6 +44,7 @@
     letter-spacing: 1px;
     font-weight: 600;
     color: white;
+    text-transform: uppercase;
 }
 
 .more:hover {
