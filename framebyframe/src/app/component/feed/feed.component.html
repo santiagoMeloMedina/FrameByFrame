@@ -3,7 +3,8 @@
         <video autoplay #videoPlayer loop>
             <source src="assets/videos/front.mp4" type="video/mp4">
             <source src="assets/videos/front.ogg" type="video/ogg">
-        </video> 
+        </video>
+        {{ setVideoPlayer(videoPlayer) }}
         <div class="column">
             <app-front></app-front>
         </div>

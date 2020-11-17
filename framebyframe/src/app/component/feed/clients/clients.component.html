@@ -1,7 +1,7 @@
 <div class="page">
     <div class="logos">
         <div class="brand" *ngFor="let brand of getBrands()">
-            <a href="{{brand['link']}}" target="_blank"><img src="{{brand['src']}}"></a>
+            <a href="{{ brand.getContent()['link'] }}" target="_blank"><img src="{{ brand.getContent()['src'] }}"></a>
         </div>
     </div>
 </div>

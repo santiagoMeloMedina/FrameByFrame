@@ -19,7 +19,9 @@ export const CONSTANTS = {
         LEARN_MORE: "LEARN MORE",
         VIEW_ALL: "VIEW ALL OUR WORK",
         WHATSAPP: "LET'S CHAT IN WHATSAPP",
-        SUBMIT: "SUBMIT"
+        SUBMIT: "SUBMIT",
+        FORWARD: "Forward",
+        BACK: "Back"
     },
     INPUT: {
         NAME: "Name",

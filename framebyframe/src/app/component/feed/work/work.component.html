@@ -1,8 +1,14 @@
 <div class="page">
     <div class="column">
         <div class="content">
-            <div class="video" *ngFor="let video of [1,2,3,4,5,6]">
-
+            <div class="video" *ngFor="let video of getVideosByCategory(); let i = index">
+                <div class="info">
+                    <video autoplay #videoPlayer loop>
+                        <source src="{{video.getContent()['src']}}" type="video/mp4">
+                    </video>
+                    {{ setVideoElement(videoPlayer, i) }}
+                    <div class="data"><span>{{ video.getCategory().getName() }}</span></div>
+                </div>
             </div>
         </div>
         <button class="more" (click)="router.navigateByUrl('work')">{{ language.get()['BUTTONS']['VIEW_ALL'] }}</button>

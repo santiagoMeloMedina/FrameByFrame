@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { SectionService } from 'src/app/service/section/section.service';
 import { LanguageService } from 'src/app/service/configuration/language/language.service';
 import { environment } from 'src/environments/environment';
@@ -16,13 +16,7 @@ export class FeedComponent implements OnInit {
   @ViewChild("divContact") divContact: ElementRef;
   @ViewChild("divClients") divClients: ElementRef;
 
-  private videoPlayer: HTMLVideoElement;
-
-
-  @ViewChild('videoPlayer')
-  set mainVideoEl(el: ElementRef) {
-    this.videoPlayer = el.nativeElement;
-  }
+  private videoPlayer: ElementRef;
 
   private currentSection: string = "";
 
@@ -34,14 +28,12 @@ export class FeedComponent implements OnInit {
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
-    let mute: any = setTimeout(() => {
-      if (typeof this.videoPlayer !== "undefined") {
-        this.videoPlayer.play();
-        this.videoPlayer.muted = true;
-      } else {
-        mute();
-      }
-    }, 0);
+  }
+
+  public setVideoPlayer(video: ElementRef): void {
+    this.videoPlayer = video;
+    this.videoPlayer['play']();
+    this.videoPlayer['muted'] = true;
   }
 
   public getFrontSection(): ElementRef {

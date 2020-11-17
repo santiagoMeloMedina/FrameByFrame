@@ -7,6 +7,15 @@
         <div class="categories">
             <div class="category" 
                 [ngStyle]="{
+                    'border': isSelected(allCategory) ? '1px solid rgba(177,152,129,1)':'none',
+                    'color': isSelected(allCategory) ? 'rgba(177,152,129,1)':'black',
+                    'padding': isSelected(allCategory) ? '9px':''
+                }" 
+                (click)="selectCategory(allCategory)">
+                <div class="name">{{ allCategory.getName() }}</div>
+            </div>
+            <div class="category" 
+                [ngStyle]="{
                     'border': isSelected(category) ? '1px solid rgba(177,152,129,1)':'none',
                     'color': isSelected(category) ? 'rgba(177,152,129,1)':'black',
                     'padding': isSelected(category) ? '9px':''
@@ -17,12 +26,18 @@
             </div>
         </div>
         <div class="videos">
-            <div class="video" *ngFor="let video of getVideosByCategory()">
-                <video autoplay #videoPlayer loop>
+            <div class="video" *ngFor="let video of getVideosByCategory(); let i = index">
+                <video autoplay #videoPlayer>
                     <source src="{{video.getContent()['src']}}" type="video/mp4">
                 </video>
+                {{ setVideoElement(videoPlayer, i) }}
             </div>
         </div>
-        <div class="space"></div>
+        <div [ngClass]="!categoryIsNull() ? 'space':'hide'">
+            <div class="pages">
+                <button [disabled]="!canBackPage()" (click)="backPage()">{{ language.get()['BUTTONS']['BACK'] }}</button>
+                <button [disabled]="!canFowardPage()" (click)="forwardPage()">{{ language.get()['BUTTONS']['FORWARD'] }}</button>
+            </div>
+        </div>
     </div>
 </div>
